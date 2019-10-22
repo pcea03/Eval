@@ -22,7 +22,7 @@
       <hr>
 
       <div id="no-more-tables">
-            <table class="col-md-12 table-striped cf text-center">
+            <table class="col-md-12 table-striped cf text-center" id="tbUser">
         		<thead class="cf">
         			<tr>
         				<th>First Name</th>
@@ -35,12 +35,12 @@
         		<tbody>
             <?php while($row = mysqli_fetch_array($result)){?>
         			<tr>
-        				<td data-title="First Name"><?php echo $row['userFname'];?></td>
-        				<td data-title="Last Name"><?php echo  $row['userLname'];?></td>
+        				<td data-title="First Name"><?php echo $row['userFname']; ?></td>
+        				<td data-title="Last Name"><?php echo  $row['userLname']; ?></td>
         				<td data-title="Email" class="numeric"><?php echo $row['userEmail'];?></td>
 
         				<td><button class="btn btn-secondary btn-block" data-toggle="modal" data-target="#updateUserModal" onclick="retrieveUser('<?php echo $row['userFname']; ?>')">Edit</button></td>
-        				<td><button class="btn btn-secondary btn-block" style="margin-right:-15px;">Delete</button></td>
+        				<td><button class="delete"  id="del_<?php echo $row['userId']; ?>" style="margin-right:-15px;">Delete</button></td>
                 </td>
         			</tr>
             <?php }?>

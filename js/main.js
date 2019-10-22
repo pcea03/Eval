@@ -76,6 +76,9 @@ loginBtn.addEventListener('click', (e) => {
 
 
 $(document).ready(function() {
+
+	displayData();
+
 	$('#butsave').on('click', function() {
 		var fname = $('#fname').val();
 		var lname = $('#lname').val();
@@ -112,7 +115,11 @@ $(document).ready(function() {
 			alert('Please fill all the field !');
 		}
 	});
-});
+
+
+
+
+
 
 function retrieveUser(userFname){
     var dataString = 'userFname=' + userFname;
@@ -173,5 +180,6 @@ function updateUser(){
 	}
 }
 
+});
 
 

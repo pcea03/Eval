@@ -1,0 +1,26 @@
+<html>
+<head><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+
+
+<table id="tbUser">
+<tr><th>Name</th><th>Location</th><th></th></tr>
+<tr><td>Amit</td><td>Ghatkopar</td><td><button class="btnDelete">Delete</button></td></tr>
+<tr><td>Vicky</td><td>Powai</td><td><button class="btnDelete">Delete</button></td></tr>
+<tr><td>Sunny</td><td>Powai</td><td><button class="btnDelete">Delete</button></td></tr>
+<tr><td>John</td><td>NewYork</td><td><button class="btnDelete">Delete</button></td></tr>
+</table> 
+
+<script>
+$(document).ready(function(){
+
+ $("#tbUser").on('click','.btnDelete',function(){
+       $(this).closest('tr').remove();
+     });
+
+});
+
+</script>
+</body>
+</html>
